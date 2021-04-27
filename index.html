@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Bon Voyage!</title>
+	<meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c"></meta>
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+function updateSliderArrowsStatus(
+  cardsContainer,
+  containerWidth,
+  cardCount,
+  cardWidth
+) {
+  if (
+    $(cardsContainer).scrollLeft() + containerWidth <
+    cardCount * cardWidth + 15
+  ) {
+    $("#slide-right-container").addClass("active");
+  } else {
+    $("#slide-right-container").removeClass("active");
+  }
+  if ($(cardsContainer).scrollLeft() > 0) {
+    $("#slide-left-container").addClass("active");
+  } else {
+    $("#slide-left-container").removeClass("active");
+  }
+}
+$(function() {
+  // Scroll products' slider left/right
+  let div = $("#cards-container");
+  let cardCount = $(div)
+    .find(".cards")
+    .children(".card").length;
+  let speed = 1000;
+  let containerWidth = $(".container").width();
+  let cardWidth = 250;
+
+  updateSliderArrowsStatus(div, containerWidth, cardCount, cardWidth);
+
+  //Remove scrollbars
+  $("#slide-right-container").click(function(e) {
+    if ($(div).scrollLeft() + containerWidth < cardCount * cardWidth) {
+      $(div).animate(
+        {
+          scrollLeft: $(div).scrollLeft() + cardWidth
+        },
+        {
+          duration: speed,
+          complete: function() {
+            setTimeout(
+              updateSliderArrowsStatus(
+                div,
+                containerWidth,
+                cardCount,
+                cardWidth
+              ),
+              1005
+            );
+          }
+        }
+      );
+    }
+    updateSliderArrowsStatus(div, containerWidth, cardCount, cardWidth);
+  });
+  $("#slide-left-container").click(function(e) {
+    if ($(div).scrollLeft() + containerWidth > containerWidth) {
+      $(div).animate(
+        {
+          scrollLeft: "-=" + cardWidth
+        },
+        {
+          duration: speed,
+          complete: function() {
+            setTimeout(
+              updateSliderArrowsStatus(
+                div,
+                containerWidth,
+                cardCount,
+                cardWidth
+              ),
+              1005
+            );
+          }
+        }
+      );
+    }
+    updateSliderArrowsStatus(div, containerWidth, cardCount, cardWidth);
+  });
+
+  // If resize action ocurred then update the container width value
+  $(window).resize(function() {
+    try {
+      containerWidth = $("#cards-container").width();
+      updateSliderArrowsStatus(div, containerWidth, cardCount, cardWidth);
+    } catch (error) {
+      console.log(
+        `Error occured while trying to get updated slider container width: 
+            ${error}`
+      );
+    }
+  });
+});
+</script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+$(document).ready(function(){
+	$(".goog-te-combo").change(function(){
+		alert($(this).val());
+		
+		 new google.translate.TranslateElement({pageLanguage: 'en'}, '$(this).val()');
+	})
+})
+function googleTranslateElementInit() {
+	debugger;
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+(function () {
+  "use strict";
+
+  var carousels = function () {
+    $(".owl-carousel1").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 0,
+      responsiveClass: true,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        680: {
+          items: 2,
+          nav: false,
+          loop: false
+        },
+        1000: {
+          items: 3,
+          nav: true
+        }
+      }
+    });
+  };
+
+  (function ($) {
+    carousels();
+  })(jQuery);
+})();
+
+
+</script>
+<script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en'
+      }, 'google_translate_element');
+    }
+  </script>
+<script src="js/jquery.inview.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/jquery.inview.min.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="header" id="myHeader">
+
+
+<div class="_topFooterSection header">
+	<div class="container">
+		<div class="row" style="height:50px">
+			<div class="col-lg-8">
+			<div class="_topContact_section">
+				<ul>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>Call us: 0231-2384762/22764782</li>
+					<li><i class="fa fa-paper-plane-o" aria-hidden="true"></i>support@bonvoyage.com</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="float-right">
+			<ul class="_NavsocialIcons">
+				    <li> <a href="#" class="fa fa-facebook"></a></li>
+                    <li> <a href="#" class="fa fa-twitter"></a></li>
+                    <li> <a href="#" class="fa fa-linkedin"></a></li>
+                    <li> <a href="#" class="fa fa-instagram"></a></li>
+					<li style="background:none;padding: 0;margin-left:15px">
+						<div class="translate">
+							<div id="google_translate_element">
+								<div dir="ltr" class="skiptranslate goog-te-gadget">    
+								</div>
+							</div>
+						</div>
+					</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="conatiner">
+<div class="col-lg-12">
+<h1></h1>
+</div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">BON VOYAGE!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#carousel-inner">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Aboutus">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#blog">Blogs</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#feedback">Feedback</a>
+      </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="#bookTicketSection">Book Tickets</a>
+      </li> 	  
+    </ul>
+  </div>  
+</nav>
+
+</div>
+<div class="conatiner">
+<div class="col-lg-12">
+<h1></h1>
+</div>
+</div>
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+	<li data-target="#demo" data-slide-to="3"></li>
+	<li data-target="#demo" data-slide-to="4"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner" id="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Images/img10.jpg" alt="travel1">
+		<div class="container">
+		<div class="_sliderOverText">
+		<h1> Taj Mahal , India </h1>
+		<p>
+		The Taj Mahal 'Crown of the Palace' is an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra.
+		It was commissioned in 1632 by the Mughal emperor Shah Jahan (reigned from 1628 to 1658) to house the tomb of his favourite wife, Mumtaz Mahal; 
+	    The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.
+		</div>
+		</div>
+    </div>
+    <div class="carousel-item">
+      <img src="Images/img12.jpeg" alt="travel2">
+	 <div class="container">
+		<div class="_sliderOverText">
+		<h1> Colosseum, Rome, Italy </h1>
+		<p>The Colosseum, is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum and is the largest ancient amphitheatre ever built, and is still the largest standing amphitheater in the world today, despite its age. 
+		Construction began under the emperor Vespasian and was completed in AD 80 under his successor and heir, Titus.
+       	Further modifications were made during the reign of Domitian</p>
+		</div>
+		</div>
+    </div>
+    <div class="carousel-item">
+      <img src="Images/img13.jpg" alt="travel3">
+	<div class="container">
+	<div class="_sliderOverText">
+		<h1> Hot air balloon ride in Bagan, Myanmar </h1>
+		<p>Bagan Balloon will open up the treasures of Bagan. 
+		As your balloon soars higher and higher over the clear blue skies of Myanmar, you will get a panoramic view of the majestic 3000 pagodas and amazing landscapes.
+        After landing, our pilots will celebrate your memorable balloon ride with delicious refreshments and a toast of champagne.
+		</p>
+		</div>
+		</div>
+    </div>
+	 <div class="carousel-item">
+      <img src="Images/img14.jpg" alt="travel4">
+	 <div class="container">
+	    <div class="_sliderOverText">
+		<h1>Great Wall of China, Beijing, China </h1>
+		<p>The Great Wall of China is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe. 
+		Several walls were built from as early as the 7th century BC,with selective stretches later joined together by Qin Shi Huang (220–206 BC),the first emperor of China.
+		</p>
+		</div>
+		</div>
+    </div>
+	 <div class="carousel-item">
+      <img src="Images/img15.jpg" alt="travel5">
+	 <div class="container">
+		 <div class="_sliderOverText">
+		 
+	    <h1>Eiffel Tower, Paris, France</h1>
+		<p>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France.
+		It is named after the engineer Gustave Eiffel, whose company designed and built the tower.
+        Locally nicknamed "La dame de fer", it was constructed from 1887 to 1889 as the entrance to the 1889 World's Fair and was initially criticised by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world.
+		</p>
+		 </div>
+		</div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</div>
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<section class="Aboutus" id="Aboutus">
+	<div class="container-fluid">
+		    <div class="row">
+		<div class="col-lg-6">
+		   <div class="aboutimage">
+		<img src="C:\Users\HP\Desktop\Travel\Images\about.jpg" alt="about1">
+		   </div>
+		   </div>
+		   <div class="col-lg-6">
+		 <div class="abouttext">
+		<h3 class="greentext" style="  padding-top:60px">About Us</h3>
+		<h1 class="redtext">BON VOYAGE!</h1>
+		<p>
+         “Travel is the main thing you purchase that makes you more extravagant”. 
+		 We, at ‘BON VOYAGE!’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.
+		 We have been moving excellent encounters for a considerable length of time through our cutting edge planned occasion bundles and other fundamental travel administrations.
+		 We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters.
+         Through our exceptionally curated occasion bundles, we need to take you on an adventure where you personally enjoy with the stunning magnificence of the world.
+		 We need you to observe sensational scenes that are a long ways past your creative ability.</p>
+		</div>
+		<ul class="aboutUsList">
+			<li><i class="fa fa-check" aria-hidden="true"></i>Bon Voyage is one of the most respected and successful names in the global travel industry, with a long and rich company heritage spanning 30 years. </li>
+			<li><i class="fa fa-check" aria-hidden="true"></i>We’ve been travelling the world for over 30 years, building a reputation for providing quality travel content that’s inspiring, engaging and informative.</li>
+			<li><i class="fa fa-check" aria-hidden="true"></i>Bon Voyage is the definitive supplier for many international travel brands.</li>
+			<li><i class="fa fa-check" aria-hidden="true"></i>The best information bank on the internet for agents and travellers.</li>
+		</ul>
+		<div class="col-lg-12 text-center learnmorebtn">
+			<button class="text-justify btn-success btn hvr-sweep-to-right">Learn More<i class="fa fa-angle-right" aria-hidden="true"></i> </button>  
+			</div>
+			</div>
+    </div>
+	</div>
+	</section>
+	<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<section class="blog" id="blog">
+	<div class="container">
+		<h1 class="redtext">Blogs- Imagine the world at a click</h1>
+		<p style="color:#f8f8f8;font-size: 20px;">Here are some of the travel vlogs which will give you an insight of all the places worth visiting in the world!</p>
+		
+		<div class="row ourBlogs">
+				<div class="col-lg-4 blocks hvr-float-shadow">
+					<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+						<i class="fa fa-user-o" aria-hidden="true"></i>
+						<h3 class="blog1"> PS I’m On My Way</h3>
+						<p>Apart from a great name, PS I’m On My Way boasts a fun, exciting, and action-packed travel blog. 
+						The homepage makes an immediate impact on new and returning viewers with a full-screen image and bright eye-catching color scheme.
+						The use of a parallax effect, combined with rows of article images and a beautiful full-width background image with text overlay, helps break up the page and give it a dynamic feel.
+                        User-friendly, PS I’m On My Way displays an interactive map enabling the audience to find the countries and relevant articles that interest them.</p>
+						<a href="https://www.psimonmyway.com/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				
+			</div>
+			<div class="col-lg-4  blocks hvr-float-shadow">
+				<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<h3> The Poor Traveler</h3>
+					<p>The Poor Traveler uses a full-screen slider that displays awe-inspiring images which will immediately connect with wanna-be travelers.
+					An Agoda search bar sits at the bottom of this slider. This helps visitors find accommodation in their chosen city, which in turn, aids the monetization of the blog.
+                   Social media buttons are shown, including the number of current followers.
+					An impressive Instagram feed is also displayed on every page, as well as underneath each blog post.Viewers will ge a good idea about the places and countries worth visiting in the world.</p>
+					<a href="https://www.thepoortraveler.net/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+				<div class="col-lg-4 blocks hvr-float-shadow">
+				<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<h3>Migrationology</h3>
+					<p>Migrationoloy is a travel food blog that is well laid out, organized, and very easy to navigate.
+					The homepage uses full-screen video media to appeal to fellow or wanna-be travelers, and it works.List of services is shown.
+					The rest of the homepage is divided into sections, displaying full-width images with text overlay, a search tool, latest blog articles, and ‘Join Me’ buttons leading to an email signup form.
+					 Guides for a selection of countries also list information in a clear format, with large images and links to hotels, restaurants, and further travel info.</p>
+				     <a href="https://migrationology.com/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 blocks hvr-float-shadow">
+				<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<h3>Scandinavian Standard</h3>
+					<p>Scandinavian Standard is a minimal, sleek and sophisticated travel and lifestyle blog that is extremely easy on the eye. The design and layout make for a calm and relaxing environment. 
+                     The white and black color scheme, combined with large, well spaced, article images, small amounts of text, and block buttons, help create an arty yet serious look and feel to the site.
+                     </p>
+				     <a href="https://www.scandinaviastandard.com/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 blocks hvr-float-shadow">
+				<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<h3>Travels of Adam</h3>
+					<p>Travels of Adam is extremely user-friendly, with categories well laid out and displayed on the homepage. 
+					The blog’s author displays his About Me info on the homepage, so his visitors can quickly see who he is, where he is traveling, and understand what they will find on his blog.
+                  A combination of bright colors gives the site a fun and refreshing feel.</p>
+				     <a href="https://travelsofadam.com/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 blocks hvr-float-shadow">
+				<div class="ourBlogMain" data-class-in="" data-class-out="block-right">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<h3>Helen in Wonderlust</h3>
+					<p>Helen in Wonderlust is a stunning travel portfolio site that puts bold and bright images at the forefront of its blog.
+					Bright, colorful and packed full of interesting and helpful information, this site easily stands out in the crowd of travel blogs.
+					 Widgets include a description of the author and blog, a newsletter sign up form, social media follow icons, and links to travel tours.</p>
+				     <a href="https://www.heleninwonderlust.co.uk/" class="greentext">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+	</div>
+</section>
+<div class="text">
+	<h1 class="redtext"> EXPLORE OUR LIST TO THE <br>"Best Places to Visit in the World"</h1>
+  <h2 class="greentext">The Hidden Gems Edition </h2>
+		<p>Do you long to explore undiscovered destinations and seek new experiences? We’ve uncovered some hidden destinations across the world that are sure to astound you.
+		Go ahead and add these hidden gems to your bucket list of the best places to visit in the world.</p>
+    </div>
+  <div class="container1">
+  
+    <div id="slide-left-container">
+      <div class="slide-left">
+      </div>
+    </div>
+	
+	<div id="cards-container">
+      <div class="cards">
+        <div class="card">
+          <img src="Images/t1.jpg" alt="t1" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Walk the Haiku Stairs in Oahu, Hawaii</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t2.jpg" alt="t2" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Dive into the blue lake at Jiuzhaigou National Park (China)</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t4.jpg" alt="t4" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Marvel at the Pangong Tso Lake in Ladakh, Himalayas</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t3.jpg" alt="t3" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Swim in the Enchanting River in Surigao del Sur, Philippines</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t5.jpg" alt="t5" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Walk up to the Monastery of Santa Maria dell’Isola in Tropea, Italy</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t6.jpg" alt="t6" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Explore Lake Natron in Tanzania, from afar!</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t7.jpg" alt="t7" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Be in two continents at the same time, in Pingvallavatn Lake, Iceland</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+           <img src="Images/t8.jpg" alt="t8" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Las Lajas Sanctuary in Ipiales, Colombia</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+           <img src="Images/t9.jpg" alt="t9" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Snorkel the Aquarium in Rangiroa, French Polynesia</b>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/t10.jpg" alt="t10" style="width:100%">
+          <div class="container">
+            <h4>
+              <b>Mooch around Montreal Botanical Garden, Canada</b>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="slide-right-container">
+      <div class="slide-right">
+      </div>
+    </div>
+
+  </div>
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+<section class="blueback">
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="expert bluebackBlocks">
+				<i class="fa fa-map-marker" aria-hidden="true"></i>
+				<h1>600</h1><span>+</span>
+				<h6 class="greentext">Locations</h6>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="problem  bluebackBlocks">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<h1> 400</h1><span>+</span>
+				<h6 class="greentext">Tour Guides</h6>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="award bluebackBlocks">
+				<i class="fa fa-users" aria-hidden="true"></i>
+				<h1> 10K</h1><span>+</span>
+				<h6 class="greentext">Customers</h6>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="experiences bluebackBlocks">
+				<i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+				<h1> 100</h1><span>+</span>
+				<h6 class="greentext">Blogs</h6>
+				</div>
+			</div>
+		</div>
+	</div>	
+	</section>
+<section class="bookTicketSection" id="bookTicketSection">
+	<div class="container">
+		<div class="row">
+			<div class="Ticketmain col-md-12">
+			<h3 class="greentext"> Book Your Tickets and Rooms</h3>
+			<h1> We are here for you</h1>
+			</div>	
+		</div>
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Children</label>
+    <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkin-date">Check-in Date</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Check-out Date</label>
+    <input type="date" id="checkout-date" name="checkout" required>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Select Room Preference</label>
+    <select id="room-selection" name="room_preference" required>
+        <option value="">Choose a Room from the List</option>
+        <option value="connecting">Connecting</option>
+        <option value="adjoining">Adjoining</option>
+        <option value="adjacent">Adjacent</option>
+    </select>
+  </div>
+  <hr>
+  <div class="elem-group">
+    <label for="message">Anything Else?</label>
+    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+  </div>
+  <center><button type="submit">Book The Rooms</button></center>
+</form>
+</div>
+</section>
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<section class="treasures">
+	<div class="main">
+	
+	</div>
+</section>
+
+
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<div class="container">
+<div class="col-lg-12"></div>
+</div>
+
+<section class="background">
+<section class="feedback" id="feedback">
+	<div class="container">
+		<h5 class="greentext">Feedback</h5>
+		<h1 class="boldtext">Our Happy Clients Say About Us</h1>
+		<p>We have got the priviledge to serve a lot of customers and we are very happy that they had a great experience with us. Here, we have feedbacks from few of our valuable customers.</p>
+
+</section>
+<section class="back">
+<div class="image-left">
+	<img src="C:\Users\HP\Desktop\Travel\Images\c1.jpg" alt="c1"/>
+	<div>
+		<h5>F LaGare, Arizona, USA<br /> </h5>
+            <p class="card-text">“I’ve travelled the net for information on various cities and countries and have had the best results finding what I need to know about countries of interest at the Bon Voyage site. 
+		    Keep up the good work.”</p>
+	</div>
+</div>
+
+<div class="image-right">
+	<img src="Images/c2.jpg" alt="c2"/>
+	<div>
+		 <h5> Sami Reijonen, Finland<br /></h5>
+            <p class="card-text">"I have used this service to determine holiday trip destinations and I was impressed that the site actually contains USEFUL information for a generic traveller. 
+			I wasn’t expecting tip rates, internal transportation schedules etc. for an exotic country, such as Kenya.”</p>
+	</div>
+</div>
+
+<div class="image-left">
+	<img src="C:\Users\HP\Desktop\Travel\Images\c6.jpg" alt="c1"/>
+	<div>
+		<h5>Eric Duncan, Washington DC, USA<br /> </h5>
+            <p class="card-text">“This site is what makes the WWW worthwhile. I found all the information I had been looking and asking countless people for. 
+			I will now recommend your site not only when needed but also just a good place to expand one’s knowledge.
+			Thanks.”</p>
+	</div>
+</div>
+
+<div class="image-right">
+	<img src="Images/c7.jpg" alt="c2"/>
+	<div>
+		 <h5> Jay Singh , Delhi, India<br /></h5>
+            <p class="card-text">“Bon Voyage helped us plan a family trip to trace our roots in Portugal and Italy. They arranged group and private tours with local drivers and guides we never could have found on our own. 
+			We could not have planned – or enjoyed – this once-in-a-lifetime experience without your planning, expertise and connections!”</p>
+	</div>
+</div>
+
+<div class="image-left">
+	<img src="C:\Users\HP\Desktop\Travel\Images\c8.jpg" alt="c1"/>
+	<div>
+		<h5>Jeanne Epping, President, American Society of Travel Agents<br /> </h5>
+            <p class="card-text">“We had the most remarkable family tour with Bon Voyage. 
+			Not only everything was perfect, but we felt, in every instance, that our guides and our gulet crew truly cared about us, both the kids and adults, and did their best to make this trip memorable. ”</p>
+	</div>
+</div>
+</div>
+</section>
+</section>
+<section class="end">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="newsletter">
+				<h1> Join Our Newsletter</h1>
+				<p>We would be sharing relevant and valuable information regarding places that our valuable customers can plan to visit. We would also share the updates and important travel information. </p>  
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter your email" style="position:relative">
+					<button class="btn btn-success" style="position: absolute;top: 5px;right: 23px;border-radius: 25px;font-size: 14px;vertical-align: middle;" type="submit">SUBSCRIBE
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="logoinfo">
+				<img src="Images/cover3.jpg">
+				<p>A More Rewarding Way To Travel.</p>
+				<span class="icons"">
+						<ul class="_NavsocialIcons">
+						<li> <a href="#" class="fa fa-facebook"></a></li>
+						<li> <a href="#" class="fa fa-twitter"></a></li>
+						<li> <a href="#" class="fa fa-linkedin"></a></li>
+						<li> <a href="#" class="fa fa-instagram"></a></li>
+						</ul>
+					</span>
+				</div>
+			</div>
+				<div class="col-lg-3">
+					<div class="Information" style="font-weight:bold;">
+					<ul style="list-style-type:none;">Office Locations
+					<li style="padding-top:20px;">India</li>
+					<li>USA</li>
+					<li>UK</li>
+					<li>Japan</li>
+					<li>China</li>
+					<li>New Zealand</li>
+					</ul>
+					</div>
+				</div>	
+				<div class="col-lg-3">
+					<div class="Information" style="font-weight:bold;">
+					<ul style="list-style-type:none;">Blogs
+					<li style="padding-top:20px;">PS I’m On My Way</li>
+					<li>The Poor Traveler</li>
+					<li>Migrationology</li>
+					<li>Scandinavian Standard</li>
+					<li>Travels of Adam</li>
+					<li>Helen in Wonderlust</li>
+					</ul>
+					</div>
+				</div>
+                <div class="col-lg-3">
+				<div class="Information bottomBorder" style="font-weight:bold;">
+					<ul style="list-style-type:none;">OPENING HOURS
+					<li style="padding-top:20px;">MON-TUES<span class="space" style="padding-left:37px;">9.00AM-17.00PM</span></li>
+					<li>WEDNESDAY<span class="space"  style="padding-left:28px;">9.00AM-17.00PM</span></li>
+					<li>THURSDAY<span class="space"  style="padding-left:40px;">9.00AM-17.00PM</span></li>
+					<li>FRIDAY<span class="space"  style="padding-left:64px;">9.00AM-17.00PM</span></li>
+					<li>SATURDAY<span class="space" style="padding-left:98px;">CLOSED</span></li>
+					</ul>
+					</div>
+				</div>	
+		</div>
+		 <div class="col-lg-12" style="color:white;"><hr></div>
+		 <div class="row">
+			<div class="col-lg-12">
+				<div class="copyright">
+			
+				<p>	<i class="fa fa-copyright" aria-hidden="true"></i> Designed & Developed by Ridhima</p>
+				</div>
+			</div>	
+		</div>	
+	</div>
+</body>
+</html>
+
+
